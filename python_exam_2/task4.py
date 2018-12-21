@@ -19,5 +19,4 @@ def yourchances(name):
 
 #fig = go.Bar(data=data)
 
-plotly.offline.plot({'data':[go.Bar(x=list(dataset.keys()), y=[dataset[i] for i in dataset])],\
-                     'layout': go.Layout(title='Your chances here')}, auto_open=True)
+plotly.offline.plot({'data':[go.Bar(x=list(dataset.keys()), y=[dataset[i] for i in dataset])],filename='myplot.html')

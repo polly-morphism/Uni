@@ -12,11 +12,4 @@ def yourchances(name):
     if 'Mathematical Analysis' in subj or chances>100:
         return 100
     return chances
-
-#data = ?
-
-#diagram = ?
-
-#fig = go.Bar(data=data)
-
-plotly.offline.plot({'data':[go.Bar(x=list(dataset.keys()), y=[dataset[i] for i in dataset])],filename='myplot.html')
+plotly.offline.plot({'data':[go.Bar(x=list(dataset), y=list(map(yourchances, dataset)))]})

@@ -1,0 +1,24 @@
+{
+    "root": "/home/pollymorphism/Uni/cryptography/lab1",
+    "program": "<python with no main file>",
+    "startedAt": "2020-09-03T11:16:54.379639",
+    "host": "pollymorphism",
+    "username": "pollymorphism",
+    "executable": "/home/pollymorphism/miniconda3/envs/east/bin/python",
+    "os": "Linux-5.3.0-46-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.1",
+    "gpu": "GeForce MX250",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": "10.1.243",
+    "args": [
+        "-f",
+        "/home/pollymorphism/.local/share/jupyter/runtime/kernel-57d0041e-f1d3-492e-be43-7f64767e3b0f.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "wobbly-donkey-1",
+    "project": "visualization-demo",
+    "heartbeatAt": "2020-09-03T11:16:57.697330"
+}

@@ -1,0 +1,6 @@
+repo: https://github.com/seungwonpark/LearningToProtect
+
+more: https://github.com/tyburam/neural-cryptography-pytorch
+      https://github.com/DylanModesitt/neural-cryptography
+
+paper: https://arxiv.org/pdf/1610.06918v1.pdf

@@ -188,3 +188,4 @@ class ZNO:
 
 if __name__ == "__main__":
     zno = ZNO()
+    zno.run()

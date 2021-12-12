@@ -1,5 +1,5 @@
 # Лобораторна робота 3
-## Веозун Поліни км-81
+## Веpзун Поліни км-81
 
 # Book CRUD
 
@@ -20,7 +20,6 @@
 
 
 ```bash
-git clone https://github.com/luvejo/bookcrud
 cd bookcrud
 docker-compose -f local.yml up --build
 ```
@@ -39,7 +38,6 @@ rm `.envs/.production.example` as `.envs/.production` and customize it.
 
 ```bash
 ssh $YOUR_SERVER
-git clone https://github.com/luvejo/bookcrud
 cd bookcrud
 docker-compose -f production.yml up --build
 ```

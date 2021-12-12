@@ -5,3 +5,5 @@ django-cors-headers==3.5.0
 django-rest-passwordreset==1.1.0
 djangorestframework==3.12.1
 PyJWT==1.7.1
+django-rest-auth==0.9.5
+django-allauth==0.46.0

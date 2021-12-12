@@ -9,6 +9,7 @@ urlpatterns = [
     path("", image_upload, name="upload"),
     path("admin/", admin.site.urls),
     path("auth/", include("users.urls")),
+    path("api/", include("rest_auth.urls")),
 ]
 
 if bool(settings.DEBUG):

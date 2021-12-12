@@ -1,5 +1,0 @@
-csv/*
-*.log
-env/*
-*.csv
-!resultQuery.csv

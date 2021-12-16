@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User, Like
 import django.contrib.auth.password_validation as validators
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -27,6 +27,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         extra_kwargs = {"password": {"write_only": True}}
         fields = (
             "username",
+            "password",
             "email",
             "first_name",
             "last_name",
@@ -36,7 +37,13 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         password = validated_data.pop("password")
-        user = Customer(**validated_data, role_id=Role.objects.get(role="CUST"))
+        user = User(**validated_data)
         user.set_password(password)
         user.save()
         return user
+
+
+class UserLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Like
+        fields = "__all__"

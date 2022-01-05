@@ -10,11 +10,12 @@ ENV PYTHONUNBUFFERED 1
 
 # install psycopg2 dependencies
 RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+    && apk add postgresql-dev gcc python3-dev musl-dev cargo
 
 # install dependencies
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
+RUN apk add --no-cache openssl-dev libffi-dev
 RUN pip install -r requirements.txt
 
 # copy entrypoint.sh

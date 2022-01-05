@@ -14,14 +14,30 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # DEBUG = True
 #
 # ALLOWED_HOSTS = []
+SECRET_KEY = "b&e*xr@8z*oxpkn%8fsnx(**lk#xz+tz97q=5@gpy4n_8*r0w^"
+DEBUG = 1
+DJANGO_ALLOWED_HOSTS = "localhost 127.0.0.1 0.0.0.0 [::1]"
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = int(os.environ.get("DEBUG", default=0))
+SQL_ENGINE = "django.db.backends.postgresql"
+SQL_DATABASE = "db_project"
+SQL_USER = "7semester"
+SQL_PASSWORD = "db_project"
+SQL_HOST = "db"
+SQL_PORT = 5432
+DATABASE = "postgres"
+
+DJANGO_SU_NAME = "tAtiNgenScolEXcERito"
+DJANGO_SU_EMAIL = "polina.verzun@innohubgroup.com"
+DJANGO_SU_PASSWORD = "*kON1!YjTc!E42&7ZkRo"
+
+# SECRET_KEY = SECRET_KEY
+
+DEBUG = DEBUG
 
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = DJANGO_ALLOWED_HOSTS.split(" ")
 
 # Application definition
 
@@ -41,6 +57,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "users",
     "rest_auth",
+    "drawio_django_model",
 ]
 
 MIDDLEWARE = [
@@ -79,12 +96,12 @@ WSGI_APPLICATION = "datingapp.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
-        "NAME": os.environ.get("SQL_DATABASE", BASE_DIR + "/" + "db.sqlite3"),
-        "USER": os.environ.get("SQL_USER", "user"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
-        "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432"),
+        "ENGINE": SQL_ENGINE,
+        "NAME": SQL_DATABASE,
+        "USER": SQL_USER,
+        "PASSWORD": SQL_PASSWORD,
+        "HOST": SQL_HOST,
+        "PORT": SQL_PORT,
     }
 }
 

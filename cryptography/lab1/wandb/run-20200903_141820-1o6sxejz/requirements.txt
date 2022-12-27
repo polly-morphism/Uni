@@ -123,7 +123,7 @@ send2trash==1.5.0
 sentencepiece==0.1.91
 sentry-sdk==0.17.3
 seqeval==0.0.12
-setuptools==49.2.0.post20200714
+setuptools==65.5.1
 shapely==1.6.4.post2
 shortuuid==1.0.1
 simpletransformers==0.47.7
